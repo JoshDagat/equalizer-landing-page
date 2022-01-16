@@ -52,20 +52,52 @@ body {
   background-position: 150px -250px;
 }
 
+@media screen and (min-width: 445px) {
+  body {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background: url("./assets/bg-main-tablet.png"),
+      url("./assets/bg-pattern-1.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 983px, 276px;
+    background-position: -280px -150px, 103% -2%;
+  }
+}
 /* 
 #####################
-# Class Selectors #
+# General Layouting #
 ##################### 
 */
 
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1110px;
+}
+
+@media screen and (min-width: 876px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .mobile__padding {
   padding: 0 2rem;
 }
+
+@media screen and (min-width: 445px) {
+  .mobile__padding {
+    padding: 0;
+  }
+}
+/* 
+#####################
+# Header Components #
+##################### 
+*/
 
 .equalizer__header {
   margin-top: 2.5rem;
@@ -77,19 +109,43 @@ body {
 }
 
 .equalizer__header h2 {
-  font-size: clamp(40px, 2vw, 88px);
+  font-size: clamp(40px, 8.3vw, 88px);
   line-height: 1.2;
   margin-bottom: 0.5em;
 }
 
 .equalizer__header p {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(16px, 2.3vw, 20px);
   line-height: 1.625;
   margin-bottom: 4em;
   font-weight: 400;
 }
 
-.equalizer__premium-eq {
+@media screen and (min-width: 600px) {
+  .equalizer__header p {
+    margin-bottom: 8em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .equalizer__header h2 {
+    max-width: 50%;
+    line-height: 1;
+  }
+  .equalizer__header p {
+    max-width: 75%;
+    line-height: 1.55;
+    margin-bottom: 15rem;
+  }
+}
+
+/* 
+################################
+# Product Highlight Components #
+################################
+*/
+
+.equalizer__product-highlight {
   background: url("./assets/bg-pattern-2.svg");
   background-size: 275px;
   background-repeat: no-repeat;
@@ -101,7 +157,8 @@ body {
 
   border-radius: 12px;
 }
-.equalizer__premium-eq > img {
+
+.equalizer__product-highlight > img {
   width: 100%;
   max-width: 209px;
 
@@ -112,7 +169,62 @@ body {
   top: -22%;
 }
 
-.equalizer__cta-card {
+@media screen and (min-width: 600px) {
+  .equalizer__product-highlight {
+    background-size: 280px;
+    min-height: 696px;
+
+    background-position: 75% -20%;
+  }
+
+  .equalizer__product-highlight > img {
+    left: 10%;
+    right: 50%;
+    margin: auto;
+    top: -15%;
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .equalizer__product-highlight > img {
+    width: 100%;
+    max-width: 270px;
+
+    top: -21%;
+  }
+
+  .equalizer__product-highlight {
+    background-position: 58% -10%;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 876px) {
+  .equalizer__product-highlight {
+    background-position: 45% -10%;
+    background-size: 312px;
+  }
+
+  .equalizer__product-highlight > img {
+    max-width: 312px;
+    top: -32%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .equalizer__product-highlight > img {
+    width: 100%;
+    /* max-width: 312px; */
+  }
+}
+/* 
+###########################
+# Product Card Components #
+###########################
+*/
+
+.equalizer__product-card {
   display: flex;
   flex-direction: column;
 
@@ -128,7 +240,34 @@ body {
   background-color: var(--clr-orange);
 }
 
-.equalizer__cta-card h2 {
+@media screen and (min-width: 445px) {
+  .equalizer__product-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .equalizer__product-card {
+    margin-right: auto;
+
+    margin-top: -25rem;
+    margin-bottom: 4rem;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .equalizer__product-card {
+    margin-right: auto;
+
+    margin-top: -32rem;
+    margin-bottom: 4rem;
+    margin-right: 5%;
+  }
+}
+
+.equalizer__product-card h2 {
   font-size: clamp(32px, 5vw, 40px);
   font-weight: bold;
   color: var(--clr-white);
@@ -137,7 +276,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-.equalizer__cta-card p {
+.equalizer__product-card p {
   font-size: clamp(18px, 2.5vw, 20px);
   font-weight: 400;
   line-height: 1.7;
@@ -145,7 +284,7 @@ body {
   margin-bottom: 1em;
 }
 
-.equalizer__cta-pricing {
+.equalizer__product-pricing {
   display: flex;
   align-items: center;
 
@@ -156,7 +295,10 @@ body {
 
   margin-bottom: 2rem;
 }
-.equalizer__cta-pricing span {
+
+/* Product Card Buttons */
+
+.equalizer__product-pricing span {
   font-size: 20px;
   line-height: 1.6;
   font-weight: normal;
@@ -164,7 +306,7 @@ body {
   margin-left: 1em;
 }
 
-.equalizer__cta-card .btn {
+.equalizer__product-card .btn {
   border: none;
   border-radius: 12px;
 
@@ -200,6 +342,12 @@ body {
   content: url("./assets/icon-android.svg");
 }
 
+/* 
+####################
+# Equalizer Footer #
+####################
+*/
+
 .equalizer__footer h1 {
   margin-bottom: 1em;
 }
@@ -218,10 +366,26 @@ body {
   font-weight: bold;
 }
 
-.equalizer__footer aside ul {
+.equalizer__footer__social-links ul {
   display: flex;
   align-items: center;
   gap: 1.5em;
 
   margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .equalizer__footer-sectioning {
+    display: flex;
+    align-items: center;
+  }
+
+  .equalizer__footer p {
+    max-width: 65%;
+  }
+
+  .equalizer__footer__social-links ul {
+    padding-right: 1em;
+    gap: 2em;
+  }
 }
