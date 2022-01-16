@@ -57,6 +57,7 @@ body {
     padding: 0 2rem;
   }
 }
+
 @media screen and (min-width: 768px) {
   body {
     background: url("./assets/bg-main-tablet.png"),
@@ -66,6 +67,17 @@ body {
     background-position: -280px -150px, 103% -2%;
   }
 }
+
+@media screen and (min-width: 992px) {
+  body {
+    background: url("./assets/bg-main-desktop.png"),
+      url("./assets/bg-pattern-1.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 983px, 276px;
+    background-position: -280px -150px, 103% -2%;
+  }
+}
+
 /* 
 #####################
 # General Layouting #
@@ -81,6 +93,13 @@ body {
   .container {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -114,6 +133,13 @@ body {
   margin-bottom: 0.5em;
 }
 
+@media screen and (min-width: 768px) {
+  .equalizer__header h2 {
+    max-width: 50%;
+    line-height: 1;
+  }
+}
+
 .equalizer__header p {
   font-size: clamp(16px, 2.3vw, 20px);
   line-height: 1.625;
@@ -128,10 +154,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .equalizer__header h2 {
-    max-width: 50%;
-    line-height: 1;
-  }
   .equalizer__header p {
     max-width: 75%;
     line-height: 1.55;
@@ -157,6 +179,27 @@ body {
 
   border-radius: 12px;
 }
+@media screen and (min-width: 600px) {
+  .equalizer__product-highlight {
+    background-size: 280px;
+    min-height: 600px;
+
+    background-position: 75% -20%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .equalizer__product-highlight {
+    background-position: 58% -10%;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 876px) {
+  .equalizer__product-highlight {
+    background-position: 45% -10%;
+    background-size: 312px;
+  }
+}
 
 .equalizer__product-highlight > img {
   width: 100%;
@@ -170,13 +213,6 @@ body {
 }
 
 @media screen and (min-width: 600px) {
-  .equalizer__product-highlight {
-    background-size: 280px;
-    min-height: 696px;
-
-    background-position: 75% -20%;
-  }
-
   .equalizer__product-highlight > img {
     left: 10%;
     right: 50%;
@@ -193,31 +229,21 @@ body {
 
     top: -21%;
   }
-
-  .equalizer__product-highlight {
-    background-position: 58% -10%;
-    position: relative;
-  }
 }
 
 @media screen and (min-width: 876px) {
-  .equalizer__product-highlight {
-    background-position: 45% -10%;
-    background-size: 312px;
-  }
-
   .equalizer__product-highlight > img {
     max-width: 312px;
     top: -32%;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1220px) {
   .equalizer__product-highlight > img {
-    width: 100%;
-    /* max-width: 312px; */
+    left: 1.5%;
   }
 }
+
 /* 
 ###########################
 # Product Card Components #
@@ -315,7 +341,7 @@ body {
   font-size: 18px;
   line-height: 1.78;
 
-  padding: 0.7em;
+  padding: 1.2em;
 }
 
 .btn.btn__apple {
@@ -348,14 +374,26 @@ body {
 ####################
 */
 
-.equalizer__footer h1 {
+.equalizer__footer-logo {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
   margin-bottom: 1em;
+
+  max-width: 200px;
+
+  flex: 1;
 }
 
 .equalizer__footer p {
   font-size: 16px;
   line-height: 1.625;
   font-style: normal;
+}
+@media screen and (min-width: 700px) {
+  .equalizer__footer p {
+    max-width: 366px;
+  }
 }
 
 .equalizer__footer p:last-of-type {
@@ -370,22 +408,49 @@ body {
   display: flex;
   align-items: center;
   gap: 1.5em;
+  padding-right: 2em;
 
   margin-bottom: 4rem;
 }
-
 @media screen and (min-width: 768px) {
-  .equalizer__footer-sectioning {
-    display: flex;
-    align-items: center;
-  }
-
-  .equalizer__footer p {
-    max-width: 65%;
-  }
-
   .equalizer__footer__social-links ul {
     padding-right: 1em;
     gap: 2em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .equalizer__footer__social-links ul {
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .equalizer__footer-inner-sectioning {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .equalizer__footer-inner-sectioning {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .equalizer__footer-outer-sectioning {
+    display: flex;
+    justify-content: space-between;
+  }
+  .equalizer__footer-inner-sectioning {
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .equalizer__footer-inner-sectioning address {
+    padding-left: 15%;
   }
 }
