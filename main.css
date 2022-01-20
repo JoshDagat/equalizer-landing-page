@@ -73,8 +73,18 @@ body {
     background: url("./assets/bg-main-desktop.png"),
       url("./assets/bg-pattern-1.svg");
     background-repeat: no-repeat, no-repeat;
-    background-size: 983px, 276px;
-    background-position: -280px -150px, 103% -2%;
+    background-size: 1600px, 312px;
+    background-position: -550px -150px, 103% -2%;
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  body {
+    background: url("./assets/bg-main-desktop.png"),
+      url("./assets/bg-pattern-1.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 1600px, 312px;
+    background-position: -150px -150px, 103% -2%;
   }
 }
 
