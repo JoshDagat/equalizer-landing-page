@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile View (Galaxy S20 360x800)](./assets/views/galaxy-s20-linux-360x800)
+![Mobile View (Galaxy S20 360x800)](./assets/views/galaxy-s20-linux-360x800.png)
 
 ![](./screenshot.jpg)
 
