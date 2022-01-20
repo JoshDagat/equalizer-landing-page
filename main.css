@@ -354,10 +354,25 @@ body {
   padding: 1.2em;
 }
 
+.equalizer__product-card .btn:hover {
+  cursor: pointer;
+}
+
 .btn.btn__apple {
   background-color: var(--clr-black);
   color: var(--clr-white);
   margin-bottom: 1em;
+}
+.btn:hover.btn__apple {
+  background-color: var(--clr-cyan);
+}
+
+.btn.btn__android {
+  background-color: var(--clr-white);
+}
+
+.btn:hover.btn__android {
+  background-color: var(--clrt-lt-orange);
 }
 
 .btn.btn__apple span,
@@ -422,6 +437,7 @@ body {
 
   margin-bottom: 4rem;
 }
+
 @media screen and (min-width: 768px) {
   .equalizer__footer__social-links ul {
     padding-right: 1em;
@@ -463,4 +479,20 @@ body {
   .equalizer__footer-inner-sectioning address {
     padding-left: 15%;
   }
+}
+
+.equalizer__footer__social-links ul li {
+  fill: #191826;
+}
+
+@media screen and (min-width: 992px) {
+  .equalizer__footer__social-links ul li {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.equalizer__footer__social-links ul li:hover {
+  cursor: pointer;
+  fill: var(--clr-orange);
 }
