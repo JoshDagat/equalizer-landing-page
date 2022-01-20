@@ -17,8 +17,8 @@ This is a solution to the [Equalizer landing page challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/JoshDagat/equalizer-landing-page)
+- Live Site URL: [Live Project](https://joshdagat.github.io/equalizer-landing-page/)
 
 ### The challenge
 
